@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Buyer–Seller Platform — Buyer Browse</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-gray-100" data-page="buyer">
+  <!-- Header -->
+  <header class="bg-blue-600 text-white p-4 flex justify-between items-center">
+    <h1 class="text-2xl font-bold">Buyer–Seller Platform</h1>
+    <nav class="flex gap-3">
+      <a class="btn" href="index.html">Home</a>
+      <a class="btn bg-green-600" href="seller.html">Seller Upload</a>
+      <a class="btn bg-yellow-600" href="buyer.html">Buyer Browse</a>
+      <a class="btn bg-indigo-600" href="requests.html">Buyer Requests</a>
+    </nav>
+  </header>
+
+  <!-- Main -->
+  <main class="p-6 max-w-6xl mx-auto">
+    <h2 class="text-xl font-semibold mb-4">Browse Products</h2>
+    <div id="productListBuyer" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4"></div>
+  </main>
+
+  <!-- Request Modal -->
+  <dialog id="requestDialog" class="rounded-lg p-0 w-full max-w-md">
+    <form id="buyerRequestForm" method="dialog" class="bg-white rounded-lg p-5 space-y-4">
+      <h3 class="text-lg font-semibold">Send a Request</h3>
+      <input type="hidden" id="reqProductId">
+      <div>
+        <label class="block font-medium mb-1">Product</label>
+        <input id="reqProductName" class="input" disabled>
+      </div>
+      <div>
+        <label class="block font-medium mb-1">Your Name</label>
+        <input id="reqBuyerName" class="input" required placeholder="Your name">
+      </div>
+      <div>
+        <label class="block font-medium mb-1">Email</label>
+        <input id="reqBuyerEmail" type="email" class="input" required placeholder="you@example.com">
+      </div>
+      <div>
+        <label class="block font-medium mb-1">Message</label>
+        <textarea id="reqMessage" class="input h-28" placeholder="Tell the seller what you need"></textarea>
+      </div>
+      <div class="flex justify-end gap-3 pt-2">
+        <button type="button" id="reqCancel" class="btn">Cancel</button>
+        <button type="submit" class="btn bg-blue-600">Send Request</button>
+      </div>
+    </form>
+  </dialog>
+
+  <footer class="bg-gray-800 text-white p-4 text-center">
+    © 2025 Buyer–Seller Platform.
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

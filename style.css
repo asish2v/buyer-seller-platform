@@ -1,0 +1,19 @@
+/* Minimal helpers (work alongside Tailwind CDN) */
+.btn {
+  padding: 0.5rem 0.75rem;
+  border-radius: 0.375rem;
+  color: #fff;
+  background: #374151; /* gray-700 */
+  transition: opacity .15s ease;
+  display: inline-block;
+}
+.btn:hover { opacity: .9; }
+
+.input {
+  width: 100%;
+  border: 1px solid #d1d5db; /* gray-300 */
+  border-radius: 0.375rem;
+  padding: 0.5rem 0.75rem;
+  outline: none;
+}
+.input:focus { box-shadow: 0 0 0 3px rgba(59,130,246,.3); } /* ring-blue-500 */

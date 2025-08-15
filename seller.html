@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Buyer–Seller Platform — Seller Upload</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-gray-100" data-page="seller">
+  <!-- Header -->
+  <header class="bg-blue-600 text-white p-4 flex justify-between items-center">
+    <h1 class="text-2xl font-bold">Buyer–Seller Platform</h1>
+    <nav class="flex gap-3">
+      <a class="btn" href="index.html">Home</a>
+      <a class="btn bg-green-600" href="seller.html">Seller Upload</a>
+      <a class="btn bg-yellow-600" href="buyer.html">Buyer Browse</a>
+      <a class="btn bg-indigo-600" href="requests.html">Buyer Requests</a>
+    </nav>
+  </header>
+
+  <!-- Main -->
+  <main class="p-6 max-w-3xl mx-auto">
+    <h2 class="text-xl font-semibold mb-4">Upload a Product</h2>
+    <form id="sellerForm" class="bg-white p-4 rounded shadow space-y-4">
+      <div>
+        <label class="block font-medium mb-1">Product Name</label>
+        <input id="productName" type="text" class="input" placeholder="e.g., PUMA Shoes" required>
+      </div>
+
+      <div>
+        <label class="block font-medium mb-1">Description</label>
+        <textarea id="productDesc" class="input h-28" placeholder="Short description" required></textarea>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        <div>
+          <label class="block font-medium mb-1">Price</label>
+          <input id="productPrice" type="number" min="0" class="input" placeholder="e.g., 2999" required>
+        </div>
+        <div>
+          <label class="block font-medium mb-1">Image URL</label>
+          <input id="productImage" type="url" class="input" placeholder="https://..." required>
+        </div>
+      </div>
+
+      <div class="flex gap-3">
+        <button class="btn bg-green-600" type="submit">Upload Product</button>
+        <button class="btn" type="reset">Clear</button>
+      </div>
+    </form>
+  </main>
+
+  <footer class="bg-gray-800 text-white p-4 text-center">
+    © 2025 Buyer–Seller Platform.
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

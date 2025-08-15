@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Buyer–Seller Platform — Home</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-gray-100" data-page="home">
+  <!-- Header -->
+  <header class="bg-blue-600 text-white p-4 flex justify-between items-center">
+    <h1 class="text-2xl font-bold">Buyer–Seller Platform</h1>
+    <nav class="flex gap-3">
+      <a class="btn" href="index.html">Home</a>
+      <a class="btn bg-green-600" href="seller.html">Seller Upload</a>
+      <a class="btn bg-yellow-600" href="buyer.html">Buyer Browse</a>
+      <a class="btn bg-indigo-600" href="requests.html">Buyer Requests</a>
+    </nav>
+  </header>
+
+  <!-- Main -->
+  <main class="p-6 max-w-6xl mx-auto">
+    <h2 class="text-xl font-semibold mb-4">Available Products</h2>
+    <div id="productListHome" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4"></div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-gray-800 text-white p-4 text-center">
+    © 2025 Buyer–Seller Platform.
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
